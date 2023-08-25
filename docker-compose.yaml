@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  ashu-ui-code: # name of app change it 
+    image: ashu-web:appv$BUILD_NUMBER
+    build:
+      context: . # location of dockerfile 
+      dockerfile: Dockerfile # name of dockerfile 
+    container_name: ashu-web-c12 
+    ports:
+      - 1235:80 # left side port b/w 1024 - 5000 
